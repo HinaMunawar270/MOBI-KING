@@ -60,3 +60,21 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+// scroll animation
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+        }
+    });
+}
+
+// Set up the Intersection Observer
+const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+// Target elements with the "scroll-animation" class
+const elements = document.querySelectorAll('.scroll-animation');
+
+// Observe each target element
+elements.forEach(element => observer.observe(element));
