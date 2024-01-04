@@ -217,7 +217,13 @@ background-color: white;}
   /* color: white; */
   transition: .5s;
 }
-
+#work-banner {
+  background-image: url('./../img/sell\ &buy.jpg');
+ 
+  background-position: center center; background-size: cover;
+  height: 100%;
+  width: 100%;
+}
 /* About */
 #work_banner {
   background-image: url('./../img/banner3.jpg');
